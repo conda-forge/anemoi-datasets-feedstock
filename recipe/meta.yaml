@@ -1,4 +1,4 @@
-{% set version = "0.5.39" %}
+{% set version = "0.5.40" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/anemoi-datasets/anemoi_datasets-{{ version }}.tar.gz
-  sha256: 16e796abb2c45c25771d7ccdae249138eb4ff0111bde84fd3905d6fe4843695c
+  sha256: a8d496e1d3e317b2eba19873fe118739a6a6341b6d85dc7bc913a1b9e33af2be
 
 build:
   entry_points:
