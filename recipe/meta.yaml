@@ -1,4 +1,4 @@
-{% set version = "0.5.48" %}
+{% set version = "0.5.49" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/anemoi-datasets/anemoi_datasets-{{ version }}.tar.gz
-  sha256: 352d6ea19e1a98aa394757f2b1cb357518fe82f08057f6da5f3da0f1b90497b8
+  sha256: a6e0cd0a85318673f44def7b2f9376af3dab2552f3c93a3a29630a103509c6e6
 
 build:
   entry_points:
