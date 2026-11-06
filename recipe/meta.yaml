@@ -14,7 +14,7 @@ build:
     - anemoi-datasets = anemoi.datasets.__main__:main
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation"
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,20 +24,23 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - anemoi-transform >=0.1.27
-    - anemoi-utils >=0.5
+    - anemoi-transform >=0.4
+    - anemoi-utils >=0.5.12
     - cfunits
     - glom
     - jsonschema
-    - numcodecs <0.16
+    - lru-dict
     - numpy
-    - pytest >=8.4.1
-    - pytest-xdist >=3.7
+    - pint
+    - psutil
+    - pydantic
+    - pyodc >=1.6
     - pyyaml
+    - rich
     - ruamel.yaml >=0.16
     - semantic_version
     - tqdm
-    - zarr <=2.18.7
+    - zarr >=2,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4
 
 test:
   imports:
@@ -47,6 +50,8 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+    - pytest >=8.4.1
+    - pytest-xdist >=3.7
 
 about:
   home: https://github.com/ecmwf/anemoi-datasets/
