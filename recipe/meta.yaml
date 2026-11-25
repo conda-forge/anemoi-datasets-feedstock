@@ -1,4 +1,4 @@
-{% set version = "0.5.50" %}
+{% set version = "0.5.51" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/anemoi-datasets/anemoi_datasets-{{ version }}.tar.gz
-  sha256: 88964c4ebe1c1f249b2b0644dbc52418b50486a36679d9f0084e2974287b72c7
+  sha256: 1e7e42c2830354fb25dc89617dae816c2aa112f7f0579850d72a7c148600ca29
 
 build:
   entry_points:
     - anemoi-datasets = anemoi.datasets.__main__:main
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation"
-  number: 1
+  number: 0
 
 requirements:
   host:
